@@ -1,266 +1,751 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluechip Web Labs | Premium Static Web Agency</title>
+    <!-- Primary Meta Tags -->
+<title>Shahi Rooms Hotel & Lodging | Best Luxury Stay in Karad near Krishna Canal</title>
+<meta name="title" content="Shahi RoomsHotel & Lodging | Best Luxury Stay in Karad near Krishna Canal">
+<meta name="description" content="Experience premium comfort at Shahi RoomsHotel, Karad. Located near Krishna Canal on Oglewadi Road. We offer AC/Non-AC rooms, family suites, and high-speed WiFi at budget-friendly prices. Book your stay today!">
+<meta name="keywords" content="Shahi RoomsHotel Karad, hotels near Krishna Canal Karad, lodging in Saidapur Karad, hotels near Oglewadi road Karad, budget hotels in Karad, luxury suites Karad, hotels near Karad Railway Station, couple friendly hotels Karad">
+
+<!-- Open Graph / Facebook (Social Media Optimization) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhirajpatil1022.github.io/Harsh-Executive-/">
+<meta property="og:title" content="Shahi RoomsHotel & Lodging | Luxury Comfort in Karad">
+<meta property="og:description" content="Premium lodging near Krishna Canal, Saidapur. Safe, clean, and professional executive rooms for business and leisure travelers.">
+<meta property="og:image" content="https://dhirajpatil1022.github.io/Harsh-Executive-/assets/img/hero-bg.jpg">
+
+<!-- Twitter Optimization -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Shahi RoomsHotel | Best Stay in Karad">
+<meta property="twitter:description" content="Stay at the top-rated executive hotel in Saidapur, Karad. Modern amenities, family-friendly atmosphere, and central location.">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <style>
-        /* --- DESIGN SYSTEM --- */
-        :root {
-            --primary: #0b4a8f;
-            --accent: #0099ff;
-            --bg: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --card: #ffffff;
-            --nav-bg: rgba(255, 255, 255, 0.9);
-            --border: rgba(0,0,0,0.06);
-            --shadow: 0 10px 30px rgba(0,0,0,0.05);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        [data-theme="dark"] {
-            --bg: #0f172a;
-            --text: #f1f5f9;
-            --text-light: #94a3b8;
-            --card: #1e293b;
-            --nav-bg: rgba(15, 23, 42, 0.9);
-            --border: rgba(255,255,255,0.1);
-            --shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background: var(--bg); 
-            color: var(--text);
-            transition: background 0.5s ease, color 0.5s ease;
-            line-height: 1.6;
-        }
-
-        /* --- PRELOADER --- */
-        #preloader {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--bg); z-index: 9999;
-            display: flex; justify-content: center; align-items: center;
-        }
-        .spinner {
-            width: 40px; height: 40px; border: 4px solid var(--text-light);
-            border-top: 4px solid var(--primary); border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-
-        /* --- NAVIGATION --- */
-        header {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            background: var(--nav-bg); backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-        }
-        .nav-container {
-            max-width: 1200px; margin: 0 auto; padding: 12px 5%;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .logo-box img { height: 45px; transition: var(--transition); }
-
-        .nav-right { display: flex; align-items: center; gap: 25px; }
-        .desktop-menu { display: flex; gap: 25px; list-style: none; }
-        .nav-link { text-decoration: none; color: inherit; font-weight: 500; font-size: 0.9rem; }
-        .nav-link:hover { color: var(--accent); }
-
-        .theme-btn, .menu-toggle { cursor: pointer; font-size: 1.2rem; color: var(--primary); }
-        .menu-toggle { display: none; }
-
-        /* --- HERO --- */
-        .hero { padding: 180px 5% 80px; text-align: center; max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px; }
-        .hero span { color: var(--primary); }
-        .hero p { color: var(--text-light); font-size: 1.1rem; margin-bottom: 35px; }
-
-        /* --- SECTION GENERIC --- */
-        section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 50px; font-family: 'Poppins'; font-size: 2rem; }
-
-        /* --- CARDS & GRID --- */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { 
-            background: var(--card); padding: 35px; border-radius: 20px; 
-            border: 1px solid var(--border); box-shadow: var(--shadow); transition: var(--transition);
-        }
-        .card:hover { transform: translateY(-10px); border-color: var(--accent); }
-
-        /* --- FAQ SECTION --- */
-        .faq-item { 
-            background: var(--card); border: 1px solid var(--border); 
-            border-radius: 12px; margin-bottom: 15px; overflow: hidden;
-        }
-        .faq-question { 
-            padding: 20px; cursor: pointer; display: flex; 
-            justify-content: space-between; align-items: center; font-weight: 600;
-        }
-        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease; color: var(--text-light); }
-        .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 200px; }
-
-        /* --- WHATSAPP --- */
-        .whatsapp-float {
-            position: fixed; left: 30px; bottom: 30px; background: #25d366; 
-            color: white; width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1001;
-        }
-
-        /* --- MOBILE NAV --- */
-        @media (max-width: 768px) {
-            .desktop-menu { display: none; }
-            .menu-toggle { display: block; }
-            .nav-menu-mobile {
-                position: fixed; top: 70px; right: -100%; width: 80%; height: 100vh;
-                background: var(--card); flex-direction: column; padding: 40px;
-                transition: 0.4s; display: flex; gap: 20px; box-shadow: var(--shadow);
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        executive: {
+                            navy: "#0f172a",
+                            gold: "#b89146",
+                            goldLight: "#d4af37",
+                            slate: "#334155",
+                            cream: "#fafaf9",
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
             }
-            .nav-menu-mobile.active { right: 0; }
         }
+    </script>
+
+    <style>
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #b89146; border-radius: 10px; }
+
+        /* Custom Glassmorphism */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        /* Animation Keyframes */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Hero Image Zoom */
+        .hero-zoom { transition: transform 20s linear; transform: scale(1); }
+        .hero-zoom.active { transform: scale(1.2); }
+
+        /* Swiper Custom */
+        .swiper-button-next, .swiper-button-prev { color: #b89146 !important; }
+        .swiper-pagination-bullet-active { background: #b89146 !important; }
+        
+        #inquiry {
+    scroll-margin-top: 100px; /* This prevents the header from covering the form title */
+}
+
     </style>
 </head>
-<body data-theme="light">
+<body class="bg-executive-cream text-executive-navy font-sans selection:bg-executive-gold selection:text-white">
 
-    <div id="preloader"><div class="spinner"></div></div>
+    <div class="bg-executive-navy text-white text-[10px] md:text-xs py-2 px-6 flex justify-between items-center tracking-widest uppercase font-semibold">
+        <span>Near Karad Railway Staition, Oglewadi Road, Karad</span>
+        <span class="hidden md:block">Call for Direct Booking: +91 8468825420</span>
+    </div>
 
-    <a href="https://wa.me/918468825420" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <nav class="sticky top-0 w-full z-[100] px-6 py-4 flex justify-between items-center glass-header border-b border-gray-200">
+        <div class="flex flex-col">
+            <span class="text-xl md:text-2xl font-serif font-bold tracking-tighter leading-none">SHAHI ROOMS</span>
+            <span class="text-[10px] tracking-[0.4em] text-executive-gold font-bold uppercase">....................</span>
+        </div>
+        
+       <div class="hidden md:flex items-center gap-6 lg:gap-10 font-medium text-[10px] lg:text-[11px] uppercase tracking-[0.2em] mx-auto text-executive-navy">
+    <a href="#home" class="hover:text-executive-gold transition relative group">Home
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-executive-gold transition-all group-hover:w-full"></span>
+    </a>
+    <a href="#about" class="hover:text-executive-gold transition relative group">Our Story
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-executive-gold transition-all group-hover:w-full"></span>
+    </a>
+    <a href="#testimonials" class="hover:text-executive-gold transition relative group">Reviews
+    <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-executive-gold transition-all group-hover:w-full"></span>
+</a>
 
-    <header>
-        <nav class="nav-container">
-            <div class="logo-box">
-                <img src="logo1.png" alt="Bluechip Web Labs">
+    <a href="#rooms" class="hover:text-executive-gold transition relative group">Suites
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-executive-gold transition-all group-hover:w-full"></span>
+    </a>
+    <a href="#gallery" class="hover:text-executive-gold transition relative group">Gallery
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-executive-gold transition-all group-hover:w-full"></span>
+    </a>
+    <a href="#contact" class="hover:text-executive-gold transition relative group">Location
+        <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-executive-gold transition-all group-hover:w-full"></span>
+    </a>
+</div>
+
+
+        <div class="flex items-center gap-4">
+            <a href="tel:+918468825420" 
+   class="bg-executive-navy text-white px-4 py-2 md:px-6 md:py-2.5 rounded-[20px] text-[10px] md:text-[11px] font-bold tracking-widest hover:bg-executive-gold transition-all shadow-lg flex items-center gap-2">
+    <i data-lucide="phone" class="w-3 h-3"></i>
+    <span class="whitespace-nowrap uppercase">Book Stay</span>
+</a>
+
+            <button class="lg:hidden text-executive-navy" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-[200] flex flex-col items-center justify-center gap-8 text-2xl font-serif translate-x-full transition-transform duration-500">
+        <button id="closeMenu" class="absolute top-8 right-8"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#rooms" class="mobile-link">Suites</a>
+        <a href="#testimonials" class="mobile-link">Reviews</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <section id="home" class="relative h-[95vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+            <img id="heroImg" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2000" 
+                 alt="Luxury Hotel" 
+                 class="w-full h-full object-cover hero-zoom">
+        </div>
+
+        <div class="relative z-20 text-center text-white px-6">
+            <h4 class="reveal text-sm md:text-base tracking-[0.5em] uppercase mb-4 opacity-90">Experience Luxury Near Karad Railway Station</h4>
+            <h1 class="reveal text-5xl md:text-8xl font-serif italic mb-8">Unmatched Elegance.</h1>
+            <div class="reveal flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#rooms" class="px-8 py-4 bg-white text-executive-navy font-bold rounded-sm hover:bg-executive-gold hover:text-white transition-all w-full md:w-auto tracking-widest text-xs">VIEW OUR SUITES</a>
+                <a href="#contact" class="px-8 py-4 bg-transparent border border-white text-white font-bold rounded-sm hover:bg-white/10 transition-all w-full md:w-auto tracking-widest text-xs">FIND US ON MAP</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-white/50 animate-bounce hidden md:block">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="relative z-30 -mt-12 max-w-6xl mx-auto px-6">
+        <div class="bg-white shadow-2xl rounded-sm grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-100 py-8">
+            <div class="p-6 text-center reveal">
+                <p class="text-3xl font-serif text-executive-gold mb-1">4.5/5</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest text-gray-400">Justdial Rating</p>
+            </div>
+            <div class="p-6 text-center reveal">
+                <p class="text-3xl font-serif text-executive-gold mb-1">24/7</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest text-gray-400">Room Service</p>
+            </div>
+            <div class="p-6 text-center reveal">
+                <p class="text-3xl font-serif text-executive-gold mb-1">100%</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest text-gray-400">Privacy Guaranteed</p>
+            </div>
+            <div class="p-6 text-center reveal">
+                <p class="text-3xl font-serif text-executive-gold mb-1">FREE</p>
+                <p class="text-[10px] uppercase font-bold tracking-widest text-gray-400">High-Speed WiFi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+            <h5 class="text-executive-gold font-bold tracking-[0.3em] uppercase text-xs mb-4">A Haven of Tranquility</h5>
+            <h2 class="text-4xl md:text-5xl font-serif mb-8 leading-tight">Your Executive Choice in the Heart of Karad.</h2>
+            <p class="text-executive-slate leading-relaxed mb-6 italic">
+                Strategically positioned near the iconic Karad Railway Station, Shahi Roomsoffers a seamless blend of traditional hospitality and modern executive amenities.
+            </p>
+            <p class="text-executive-slate leading-relaxed mb-8">
+                Whether you are a business traveler passing through Oglewadi or a couple seeking a private retreat, our suites are designed to provide the ultimate comfort with premium AC units, luxury linens, and dedicated workspace.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="flex items-start gap-3">
+                    <i data-lucide="check-circle-2" class="text-executive-gold w-5 h-5 mt-1"></i>
+                    <div>
+                        <h6 class="font-bold text-sm">Strategic Location</h6>
+                        <p class="text-xs text-gray-500">2 Mins from Karad </p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <i data-lucide="check-circle-2" class="text-executive-gold w-5 h-5 mt-1"></i>
+                    <div>
+                        <h6 class="font-bold text-sm">Couple Friendly</h6>
+                        <p class="text-xs text-gray-500">Unmatched Local Privacy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 reveal">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800" class="rounded-sm shadow-xl mt-12" alt="Room View">
+            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=800" class="rounded-sm shadow-xl" alt="Lobby">
+        </div>
+    </section>
+
+    <section id="rooms" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-serif mb-4">Our Executive Suites</h2>
+                <div class="h-1 w-24 bg-executive-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group reveal bg-executive-cream rounded-sm overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800" alt="Executive AC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-executive-navy text-white text-[10px] px-3 py-1 font-bold tracking-widest uppercase">Popular Choice</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif mb-2">Executive AC Suite</h3>
+                        <p class="text-xs text-gray-500 mb-6 flex items-center gap-2"><i data-lucide="users" class="w-3 h-3"></i> 2 Adults + 1 Child</p>
+                        <ul class="space-y-3 mb-8 text-sm text-executive-slate">
+                            <li class="flex items-center gap-3"><i data-lucide="air-vent" class="w-4 h-4 text-executive-gold"></i> Premium Air Conditioning</li>
+                            <li class="flex items-center gap-3"><i data-lucide="tv" class="w-4 h-4 text-executive-gold"></i> Smart LED TV with OTT</li>
+                            <li class="flex items-center gap-3"><i data-lucide="bath" class="w-4 h-4 text-executive-gold"></i> Modern Ensuite Bathroom</li>
+                        </ul>
+                      <div class="grid grid-cols-2 gap-3">
+    <!-- WhatsApp Inquiry -->
+    <!-- For Suite 1, 2, and 3 -->
+<a href="#inquiry" 
+   class="text-center border border-executive-navy py-3 text-[10px] font-bold tracking-widest hover:bg-executive-navy hover:text-white transition-all uppercase flex items-center justify-center gap-1">
+   Inquiry
+</a>
+
+    
+    <!-- Direct Call -->
+    <a href="tel:+918468825420" 
+       class="text-center bg-executive-gold py-3 text-[10px] font-bold tracking-widest text-white hover:bg-executive-navy transition-all uppercase flex items-center justify-center gap-1">
+       Call Now
+    </a>
+</div>
+
+
+                    </div>
+                </div>
+
+                <div class="group reveal bg-executive-cream rounded-sm overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500" style="transition-delay: 100ms;">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800" alt="Deluxe Non-AC" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif mb-2">Deluxe Non-AC</h3>
+                        <p class="text-xs text-gray-500 mb-6 flex items-center gap-2"><i data-lucide="users" class="w-3 h-3"></i> 2 Adults</p>
+                        <ul class="space-y-3 mb-8 text-sm text-executive-slate">
+                            <li class="flex items-center gap-3"><i data-lucide="wind" class="w-4 h-4 text-executive-gold"></i> Well Ventilated Rooms</li>
+                            <li class="flex items-center gap-3"><i data-lucide="wifi" class="w-4 h-4 text-executive-gold"></i> Complimentary WiFi</li>
+                            <li class="flex items-center gap-3"><i data-lucide="utensils" class="w-4 h-4 text-executive-gold"></i> 24/7 In-room Dining</li>
+                        </ul>
+              <div class="grid grid-cols-2 gap-3">
+    <!-- WhatsApp Inquiry -->
+   <!-- For Suite 1, 2, and 3 -->
+<a href="#inquiry" 
+   class="text-center border border-executive-navy py-3 text-[10px] font-bold tracking-widest hover:bg-executive-navy hover:text-white transition-all uppercase flex items-center justify-center gap-1">
+   Inquiry
+</a>
+
+    
+    <!-- Direct Call -->
+    <a href="tel:+918468825420" 
+       class="text-center bg-executive-gold py-3 text-[10px] font-bold tracking-widest text-white hover:bg-executive-navy transition-all uppercase flex items-center justify-center gap-1">
+       Call Now
+    </a>
+</div>
+                    </div>
+                </div>
+
+                <div class="group reveal bg-executive-cream rounded-sm overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500" style="transition-delay: 200ms;">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800" alt="King Executive" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif mb-2">King Executive</h3>
+                        <p class="text-xs text-gray-500 mb-6 flex items-center gap-2"><i data-lucide="users" class="w-3 h-3"></i> 2 Adults + 2 Children</p>
+                        <ul class="space-y-3 mb-8 text-sm text-executive-slate">
+                            <li class="flex items-center gap-3"><i data-lucide="maximize" class="w-4 h-4 text-executive-gold"></i> Extra Spacious Floor Area</li>
+                            <li class="flex items-center gap-3"><i data-lucide="coffee" class="w-4 h-4 text-executive-gold"></i> Electric Kettle & Mini Bar</li>
+                            <li class="flex items-center gap-3"><i data-lucide="shield" class="w-4 h-4 text-executive-gold"></i> Electronic In-room Safe</li>
+                        </ul>
+               <div class="grid grid-cols-2 gap-3">
+    <!-- WhatsApp Inquiry -->
+   <!-- For Suite 1, 2, and 3 -->
+<a href="#inquiry" 
+   class="text-center border border-executive-navy py-3 text-[10px] font-bold tracking-widest hover:bg-executive-navy hover:text-white transition-all uppercase flex items-center justify-center gap-1">
+   Inquiry
+</a>
+
+    
+    <!-- Direct Call -->
+    <a href="tel:+918468825420" 
+       class="text-center bg-executive-gold py-3 text-[10px] font-bold tracking-widest text-white hover:bg-executive-navy transition-all uppercase flex items-center justify-center gap-1">
+       Call Now
+    </a>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-executive-navy overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+            <div class="reveal">
+                <h2 class="text-4xl font-serif text-white mb-2">Visual Tour</h2>
+                <p class="text-executive-gold tracking-widest uppercase text-[10px] font-bold">Shahi RoomsInteriors</p>
+            </div>
+            <div class="flex gap-4">
+                <button class="swiper-prev-custom text-white p-2 border border-white/20 hover:bg-executive-gold transition-all"><i data-lucide="arrow-left"></i></button>
+                <button class="swiper-next-custom text-white p-2 border border-white/20 hover:bg-executive-gold transition-all"><i data-lucide="arrow-right"></i></button>
+            </div>
+        </div>
+        
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="h1.jpg" class="h-96 w-full object-cover rounded-sm"></div>
+                <div class="swiper-slide"><img src="h2.jpg" class="h-96 w-full object-cover rounded-sm"></div>
+                <div class="swiper-slide"><img src="h3.jpg" class="h-96 w-full object-cover rounded-sm"></div>
+                <div class="swiper-slide"><img src="h4.jpg" class="h-96 w-full object-cover rounded-sm"></div>
+               <!--   <div class="swiper-slide"><img src="h5.jpg" class="h-96 w-full object-cover rounded-sm"></div>
+                <div class="swiper-slide"><img src="h6.jpg" class="h-96 w-full object-cover rounded-sm"></div> -->
+            </div>
+        </div>
+    </section>
+   <!-- Inquiry Form Section -->
+<section id="inquiry" class="py-24 bg-white px-6">
+    <div class="max-w-3xl mx-auto bg-executive-cream p-8 md:p-12 rounded-sm shadow-xl border border-gray-100 reveal">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-serif mb-2 text-executive-navy">Check Availability</h2>
+            <p class="text-executive-gold text-[10px] tracking-[0.3em] uppercase font-bold">Fast & Direct Booking</p>
+        </div>
+
+        <form id="whatsappForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-widest mb-2">Name</label>
+                    <input type="text" id="formName" required class="w-full px-4 py-3 bg-white border border-gray-200 focus:border-executive-gold outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-widest mb-2">Mob No.</label>
+                    <input type="tel" id="formMobile" required class="w-full px-4 py-3 bg-white border border-gray-200 focus:border-executive-gold outline-none text-sm">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-widest mb-2">Arrival Date</label>
+                    <input type="date" id="formArrival" required class="w-full px-4 py-3 bg-white border border-gray-200 focus:border-executive-gold outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-widest mb-2">Guests</label>
+                    <select id="formGuests" class="w-full px-4 py-3 bg-white border border-gray-200 focus:border-executive-gold outline-none text-sm">
+                        <option value="1 Adult">1 Adult</option>
+                        <option value="2 Adults" selected>2 Adults</option>
+                        <option value="3+ Adults">3+ Adults</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-widest mb-2">Room Type</label>
+                    <select id="formRoom" class="w-full px-4 py-3 bg-white border border-gray-200 focus:border-executive-gold outline-none text-sm">
+                        <option value="Executive AC">Executive AC</option>
+                        <option value="Deluxe Non-AC">Deluxe Non-AC</option>
+                        <option value="King Executive">King Executive</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-[11px] font-bold uppercase tracking-widest mb-2">Any Special request</label>
+                <textarea id="formRequest" placeholder="e.g. Early check-in, Flower decoration..." class="w-full px-4 py-3 bg-white border border-gray-200 focus:border-executive-gold outline-none text-sm h-24"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-executive-navy text-white py-4 font-bold tracking-[0.2em] text-xs hover:bg-executive-gold transition-all uppercase shadow-lg">Submit Inquiry</button>
+            
+            <div class="text-center space-y-3 pt-4">
+                <p class="text-[10px] text-gray-500 font-bold">🛡️ Safe & Direct Booking via WhatsApp</p>
+                <p class="text-[9px] text-executive-gold uppercase tracking-widest underline cursor-pointer">Terms & Conditions</p>
+                <p class="text-[10px] text-executive-slate italic leading-tight px-4">
+                    <span class="font-bold">Note:</span> Sending an inquiry does not guarantee a room. Booking is confirmed only after the hotel provides a confirmation reply/token.
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Pop-up Modal -->
+    <div id="successModal" class="fixed inset-0 z-[300] hidden flex items-center justify-center px-6">
+        <div class="absolute inset-0 bg-executive-navy/40 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="bg-white p-8 rounded-sm shadow-2xl relative z-10 max-w-sm w-full text-center border-t-4 border-executive-gold">
+            <button type="button" onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-executive-navy">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="w-16 h-16 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-2xl font-serif mb-2">Thank You!</h3>
+            <p class="text-sm text-gray-600 mb-6">Wait for the hotel's confirmation message on WhatsApp.</p>
+            <button type="button" onclick="closeModal()" class="w-full bg-executive-navy text-white py-3 text-[10px] font-bold tracking-widest uppercase hover:bg-executive-gold transition-all">OK</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <section id="contact" class="py-24 bg-executive-cream">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+            <div class="reveal">
+                <h2 class="text-4xl font-serif mb-8">Reach Us</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-md shrink-0">
+                            <i data-lucide="map-pin" class="text-executive-gold"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-lg mb-1 tracking-tight">Our Address</h5>
+                            <p class="text-gray-500 text-sm leading-relaxed">Near Karad railway station, Oglewadi Road, Karad, Maharashtra 415110</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-md shrink-0">
+                            <i data-lucide="phone" class="text-executive-gold"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-lg mb-1 tracking-tight">Direct Contact</h5>
+                            <p class="text-gray-500 text-sm">+91 91234 56789 <br> +91 02164 123456</p>
+                        </div>
+                    </div>
+                    <!-- Email Section -->
+<div class="flex gap-6">
+    <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-md shrink-0">
+        <i data-lucide="mail" class="text-executive-gold"></i>
+    </div>
+    <div>
+        <h5 class="font-bold text-lg mb-1 tracking-tight">Email Us</h5>
+        <p class="text-gray-500 text-sm break-all">
+            <a href="mailto:harshecxicutivecantact@gmail.com" class="hover:text-executive-gold transition-colors">
+                shahihotelcantact@gmail.com
+            </a>
+        </p>
+    </div>
+</div>
+
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-md shrink-0">
+                            <i data-lucide="clock-4" class="text-executive-gold"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-lg mb-1 tracking-tight">Standard Hours</h5>
+                            <p class="text-gray-500 text-sm">Check-in: 12:00 PM <br> Check-out: 11:00 AM</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="nav-right">
-                <ul class="desktop-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#projects" class="nav-link">Portfolio</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                </ul>
-                <div class="theme-btn" id="themeBtn"><i class="fas fa-moon"></i></div>
-                <div class="menu-toggle" id="menuBtn"><i class="fas fa-bars"></i></div>
+            <div class="h-[450px] bg-white p-4 shadow-2xl rounded-sm reveal relative">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.3323402955816!2d74.19210989999999!3d17.299506899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc18355aaa96899%3A0x66455f359acf56d3!2sHarsh%20Executive%20Hotel%20%26%20lodging!5e0!3m2!1sen!2sin!4v1768472866480!5m2!1sen!2sin" 
+                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 border-none" 
+                        allowfullscreen="" loading="lazy"></iframe>
+                <div class="absolute bottom-10 left-10 bg-executive-navy text-white px-6 py-3 text-[10px] tracking-widest font-bold uppercase shadow-2xl">View on Google Maps</div>
             </div>
-        </nav>
-        <div class="nav-menu-mobile" id="mobileMenu">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#projects" class="nav-link">Portfolio</a>
-            <a href="#faq" class="nav-link">FAQ</a>
         </div>
-    </header>
+    </section>
+    <!-- Testimonials Section -->
+<section id="testimonials" class="py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+            <h5 class="text-executive-gold font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Guest Experiences</h5>
+            <h2 class="text-4xl md:text-5xl font-serif">What Our Guests Say</h2>
+            <div class="h-1 w-24 bg-executive-gold mx-auto mt-6"></div>
+        </div>
 
-    <main id="home">
-        <section class="hero">
-            <h1>Scale Your Brand With <span>Premium Static Websites</span></h1>
-            <p>We build lightning-fast, high-converting digital platforms for local brands. Starting at ₹12,000 to ₹15,000.</p>
-            <a href="tel:8468825420" style="background:var(--primary); color:white; padding:15px 30px; border-radius:50px; text-decoration:none; font-weight:bold;">Call Us: 8468825420</a>
-        </section>
+        <!-- Swiper for Testimonials -->
+        <div class="swiper testimonialSwiper pb-12">
+            <div class="swiper-wrapper">
+                
+                <!-- Review 1 -->
+                <div class="swiper-slide h-auto">
+                    <div class="bg-executive-cream p-8 md:p-10 rounded-sm border border-gray-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex text-executive-gold mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-executive-slate italic leading-relaxed mb-8 flex-grow">"The best executive stay in Karad. The proximity to Krishna Canal is a huge plus. Rooms are spotless, and the AC is powerful. Perfect for business travelers."</p>
+                        <div class="flex items-center gap-4 border-t border-gray-200 pt-6">
+                            <div class="w-10 h-10 bg-executive-navy rounded-full flex items-center justify-center text-white font-bold text-xs">RP</div>
+                            <div>
+                                <h6 class="font-bold text-sm text-executive-navy">Rahul Patil</h6>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-widest">Business Traveler</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <section id="services">
-            <h2 class="section-title">Why Choose Us?</h2>
-            <div class="grid">
-                <div class="card">
-                    <i class="fas fa-bolt fa-2x" style="color:var(--accent); margin-bottom:15px;"></i>
-                    <h3>Extreme Speed</h3>
-                    <p>Static websites load 10x faster than WordPress, ensuring you never lose a customer to slow loading.</p>
+                <!-- Review 2 -->
+                <div class="swiper-slide h-auto">
+                    <div class="bg-executive-cream p-8 md:p-10 rounded-sm border border-gray-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex text-executive-gold mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-executive-slate italic leading-relaxed mb-8 flex-grow">"I appreciate the privacy and the quick room service. The staff is professional and the location is very easy to find from the main road. Great value for money."</p>
+                        <div class="flex items-center gap-4 border-t border-gray-200 pt-6">
+                            <div class="w-10 h-10 bg-executive-navy rounded-full flex items-center justify-center text-white font-bold text-xs">AS</div>
+                            <div>
+                                <h6 class="font-bold text-sm text-executive-navy">Anjali Shinde</h6>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-widest">Leisure Guest</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-shield-alt fa-2x" style="color:var(--accent); margin-bottom:15px;"></i>
-                    <h3>Unbeatable Security</h3>
-                    <p>With no database to hack, your website is practically immune to most common web attacks.</p>
+
+                <!-- Review 3 -->
+                <div class="swiper-slide h-auto">
+                    <div class="bg-executive-cream p-8 md:p-10 rounded-sm border border-gray-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex text-executive-gold mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-executive-slate italic leading-relaxed mb-8 flex-grow">"Excellent hospitality! The non-AC rooms are also well-ventilated and clean. Highly recommended if you are staying in the Oglewadi area."</p>
+                        <div class="flex items-center gap-4 border-t border-gray-200 pt-6">
+                            <div class="w-10 h-10 bg-executive-navy rounded-full flex items-center justify-center text-white font-bold text-xs">MK</div>
+                            <div>
+                                <h6 class="font-bold text-sm text-executive-navy">Mahesh Kulkarni</h6>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-widest">Local Visitor</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-cloud-upload-alt fa-2x" style="color:var(--accent); margin-bottom:15px;"></i>
-                    <h3>Free Hosting</h3>
-                    <p>We provide 1 year of free high-speed cloud hosting and domain name with every new project.</p>
+
+            </div>
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination !-bottom-2"></div>
+        </div>
+    </div>
+</section>
+
+
+    <a href="https://wa.me/918468825420" 
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-[#25D366] w-16 h-16 rounded-full shadow-[0_10_25px_rgba(0,0,0,0.3)] z-[200] flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group"
+   aria-label="Chat on WhatsApp">
+    
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 2c-5.513 0-9.99 4.477-9.99 9.99 0 1.761.458 3.414 1.257 4.852l-1.334 4.87 4.985-1.309c1.408.775 3.016 1.218 4.726 1.218 5.513 0 9.991-4.477 9.991-9.99S17.544 2 12.031 2zm6.342 14.129c-.261.733-1.509 1.34-2.074 1.419-.508.072-1.168.106-1.874-.118-.432-.136-.985-.319-1.694-.625-2.981-1.287-4.928-4.289-5.077-4.487-.148-.199-1.213-1.612-1.213-3.074 0-1.462.768-2.182 1.04-2.479.272-.297.52-.372.792-.372.198 0 .397.002.57.01.182.01.427-.069.669.51.247.595.841 2.058.916 2.207.075.149.124.322.025.52-.099.199-.148.323-.298.497-.148.174-.312.387-.446.52-.148.148-.043.309.13.606.173.298.77 1.271 1.653 2.059 1.135 1.012 2.093 1.325 2.39 1.475.297.148.471.124.644-.075.173-.198.743-.867.94-1.164.199-.297.397-.249.67-.15.272.099 1.733.817 2.03.967.298.148.497.223.57.347.075.124.075.719-.173 1.413z"/>
+    </svg>
+
+    <span class="absolute right-20 bg-white text-black text-[10px] font-bold px-3 py-2 rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-100 pointer-events-none">
+        BOOK NOW
+    </span>
+</a>
+
+
+
+    <footer class="bg-executive-navy py-20 border-t border-white/5 overflow-hidden relative">
+        <div class="absolute -right-20 bottom-0 text-[150px] font-serif text-white opacity-[0.02] select-none italic pointer-events-none">Harsh</div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <span class="text-3xl font-serif text-white font-bold tracking-tighter">SHAHI ROOMS</span>
+                <p class="text-gray-500 text-xs mt-4 leading-relaxed tracking-wider">Defining luxury hospitality for modern professionals and travelers in the heart of Karad.</p>
+                <div class="flex gap-4 mt-8">
+                    <a href="#" class="text-white hover:text-executive-gold"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="text-white hover:text-executive-gold"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-white hover:text-executive-gold"><i data-lucide="twitter"></i></a>
                 </div>
             </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Design Concepts</h2>
-            <div class="grid">
-                <div class="card" style="text-align:left;">
-                    <div style="height:150px; background:var(--primary); border-radius:10px; margin-bottom:15px; display:flex; align-items:center; justify-content:center; color:white;">Hotel Red Chilly</div>
-                    <h3>Hotel Red Chilly</h3>
-                    <p>Concept for modern hospitality.</p>
-                    <a href="#" class="nav-link" style="color:var(--accent); margin-top:10px; display:block;">Preview Link <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="card" style="text-align:left;">
-                    <div style="height:150px; background:var(--accent); border-radius:10px; margin-bottom:15px; display:flex; align-items:center; justify-content:center; color:white;">Patil Electricals</div>
-                    <h3>Patil Electricals</h3>
-                    <p>Concept for industrial services.</p>
-                    <a href="#" class="nav-link" style="color:var(--accent); margin-top:10px; display:block;">Preview Link <i class="fas fa-arrow-right"></i></a>
+            <div>
+                <h5 class="text-white font-bold text-xs uppercase tracking-[0.3em] mb-6">Quick Links</h5>
+                <ul class="space-y-4 text-[11px] text-gray-500 uppercase tracking-widest">
+                    <li><a href="#about" class="hover:text-white transition-colors">About Karad</a></li>
+                    <li><a href="#rooms" class="hover:text-white transition-colors">Executive Suites</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition-colors">Property Gallery</a></li>
+                    <li><a href="#contact" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold text-xs uppercase tracking-[0.3em] mb-6">Newsletter</h5>
+                <p class="text-gray-500 text-xs mb-6">Subscribe to receive seasonal offers and travel tips for Maharashtra.</p>
+                <div class="flex">
+                    <input type="email" placeholder="YOUR EMAIL" class="bg-white/5 border border-white/10 px-4 py-3 text-white text-[10px] tracking-widest outline-none w-full focus:border-executive-gold transition-all">
+                    <button class="bg-executive-gold px-6 py-3 text-white"><i data-lucide="chevron-right"></i></button>
                 </div>
             </div>
-        </section>
-
-        <section id="faq">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item">
-                    <div class="faq-question">Why is the price ₹12,000 to ₹15,000? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">This covers our custom hand-coding process, UI design, 1 year of domain registration, and high-speed cloud hosting.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Is hosting really free? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Yes, for the first year. From the second year, there is a renewal fee of ₹4,000 to keep your domain and hosting active.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Can I update the website later? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Absolutely. We offer 1 year of free technical support for minor updates and maintenance.</div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer style="padding:40px 5%; text-align:center; border-top:1px solid var(--border); color:var(--text-light);">
-        <p>Bluechip Web Labs &copy; 2026 | Professional Static Solutions</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/5 text-center">
+            <p class="text-[9px] text-gray-600 tracking-[0.5em] uppercase">&copy; 2026 Shahi Hotel Karad. All Rights Reserved.
+           <p class="text-[10px] text-gray-500 tracking-widest uppercase">
+        Designed & Developed by 
+        <a href="https://dhirajpatil1022.github.io/BluechipWebLabs/" 
+        class="text-executive-gold hover:text-white transition-colors duration-300 font-bold border-b border-executive-gold/30 hover:border-white">
+            BlueChip Web Labs
+        </a>
+    </p></p>
+            
+        </div>
     </footer>
 
     <script>
-        // 1. Preloader
-        window.onload = () => {
-            setTimeout(() => {
-                document.getElementById('preloader').style.display = 'none';
-            }, 800);
-        };
+        // Lucide Icons
+        lucide.createIcons();
 
-        // 2. Dark Mode Toggle
-        const themeBtn = document.getElementById('themeBtn');
-        themeBtn.onclick = () => {
-            const current = document.body.getAttribute('data-theme');
-            const target = current === 'light' ? 'dark' : 'light';
-            document.body.setAttribute('data-theme', target);
-            themeBtn.innerHTML = target === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-        };
+        // Scroll Reveal Utility
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
 
-        // 3. Mobile Menu Toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.onclick = () => {
-            mobileMenu.classList.toggle('active');
-            menuBtn.innerHTML = mobileMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        };
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // 4. FAQ Accordion Logic
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.onclick = () => {
-                const item = q.parentElement;
-                item.classList.toggle('active');
-                q.querySelector('i').classList.toggle('fa-plus');
-                q.querySelector('i').classList.toggle('fa-minus');
-            };
+        // Hero Image Zoom Trigger
+        window.addEventListener('load', () => {
+            document.getElementById('heroImg').classList.add('active');
         });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        const hideMenu = () => mobileMenu.classList.add('translate-x-full');
+        closeMenu.addEventListener('click', hideMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', hideMenu));
+
+        // Swiper Gallery Initialization
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            centeredSlides: true,
+            loop: true,
+            autoplay: { delay: 3500 },
+            navigation: {
+                nextEl: ".swiper-next-custom",
+                prevEl: ".swiper-prev-custom",
+            },
+            breakpoints: {
+                768: { slidesPerView: 2.5, spaceBetween: 40 }
+            }
+        });
+        // Testimonial Swiper Initialization
+var testimonialSwiper = new Swiper(".testimonialSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: { delay: 4000 },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        768: { slidesPerView: 2, spaceBetween: 30 },
+        1024: { slidesPerView: 3, spaceBetween: 40 }
+    }
+});
+
+// Modal Toggle Functions
+function closeModal() {
+    document.getElementById('successModal').classList.add('hidden');
+}
+
+// Form Submission Logic
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // 1. Get Values
+    const name = document.getElementById('formName').value;
+    const mobile = document.getElementById('formMobile').value;
+    const arrival = document.getElementById('formArrival').value;
+    const guests = document.getElementById('formGuests').value;
+    const room = document.getElementById('formRoom').value;
+    const rawRequest = document.getElementById('formRequest').value.trim();
+    
+    // 2. Auto-select 'No' if request is empty
+    const request = rawRequest === "" ? "No" : rawRequest;
+
+    // 3. Format WhatsApp Message
+    const message = `Hello, Hotel SHAHI ROOMS,I have an enquiry details are below:%0A%0A` +
+                    `*Name:* ${name}%0A` +
+                    `*Mob no:* ${mobile}%0A` +
+                    `*Date of Arrival:* ${arrival}%0A` +
+                    `*Number of Guests:* ${guests}%0A` +
+                    `*Room Type:* ${room}%0A` +
+                    `*Special Request:* ${request}`;
+
+    // 4. Show Success Modal
+    document.getElementById('successModal').classList.remove('hidden');
+    lucide.createIcons(); // Refresh icons inside modal
+
+    // 5. Open WhatsApp after a short delay (8468825420)
+    setTimeout(() => {
+        window.open(`https://wa.me/918468825420?text=${message}`, '_blank');
+    }, 1500);
+});
+
+
+
+
+
     </script>
 </body>
 </html>
